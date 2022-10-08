@@ -14,8 +14,8 @@ and I want you to tell me how many times 'Romeo' shows up.
 
 ## Input Format
 
-The first line contains *n*, the number of lines in the paragraph we need you
-to check. *n* lines follow.
+The first line contains *x* and *y*, the number of lines in the paragraph we need you
+to check and the number of characters in each line, respectively. *n* lines follow.
 
 ## Constraints
 
