@@ -10,18 +10,19 @@ MAX_LEN = 100
 
 ROMEO_OCCURANCE = 0.05
 
+
 def main(num_samples=1, num_lines=-1):
-    if num_lines == -1:
-        gen_num_lines = True
+    gen_num_lines = (num_lines == -1)
     for i in range(num_samples):
         if gen_num_lines:
             num_lines = random.randint(MIN_LINES, MAX_LINES)
         line_len = random.randint(MIN_LEN, MAX_LEN)
+        # line_len = 10
         with open('samples/input/input' + str(i) + '.txt', 'w') as f:
-            f.write(str(num_lines) + ' ' + str(line_len) + '\n')
-            
+            f.write(str(num_lines) + '\n')
+
             for _ in range(num_lines):
-                romeo_insert_loc = random.randint(0, int(line_len / 0.1)) 
+                romeo_insert_loc = random.randint(0, int(line_len / 0.1))
                 j = 0
                 while j < line_len:
                     if romeo_insert_loc < line_len - len('Romeo') and \
@@ -34,8 +35,6 @@ def main(num_samples=1, num_lines=-1):
                 f.write('\n')
 
 
-
-
 def check_args():
     num_samples = int(sys.argv[1])
     assert num_samples >= 1, 'Number of samples must be at least 1'
@@ -44,8 +43,8 @@ def check_args():
         num_lines = int(sys.argv[2])
         assert int(num_lines) >= MIN_LINES and int(num_lines) <= MAX_LINES, \
             'Invalid number of lines, must be between ' + MIN_LINES + ' and ' \
-                    + MAX_LINES
-        
+            + MAX_LINES
+
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
@@ -56,4 +55,3 @@ if __name__ == '__main__':
         main(int(sys.argv[1]), int(sys.argv[2]))
     else:
         main()
-
