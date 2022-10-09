@@ -9,5 +9,5 @@ There are 7 colors of puyo possible.
 M is the number of rows.
 N is the number of columns.
 
-12 <= N <= 2^6
-6 <= M <= 2^5 
+12 <= M <= 2^6
+6 <= N <= 2^5 
