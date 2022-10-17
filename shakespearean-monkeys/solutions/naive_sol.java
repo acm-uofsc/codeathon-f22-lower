@@ -6,20 +6,34 @@ class solutions {
         Scanner in = new Scanner(System.in);
 
         // Get number of lines from input to check
-        int numLines = in.nextInt();
-        in.nextLine();
+        String lengths = in.nextLine();
+        String[] lengths_split = lengths.split(" ");
+        int numLines = Integer.parseInt(lengths_split[0]);
+        int numKeys = Integer.parseInt(lengths_split[1]);
 
         // Get the search key
-        String searchKey = in.nextLine();
-
-        int counter = 0;
-        for (int i = 0; i < numLines; i++) {
-            String line = in.nextLine();
-            counter = counter + countLine(line, searchKey);
+        String searchKeyLine = in.nextLine();
+        String[] searchKeys;
+        if (searchKeyLine.contains(";")) {
+            searchKeys = searchKeyLine.split(";");
+        } else {
+            String[] key = {searchKeyLine};
+            searchKeys = key;
         }
 
-        // Print result
-        System.out.println(counter);
+        for (int i = 0; i < numLines; i++) {
+            int[] counters = new int[numKeys];
+            String line = in.nextLine();
+            for (int j = 0; j < numKeys; j++) {
+                int count = countLine(line, searchKeys[j]);
+                counters[j] = count;
+            }
+            for (int j = 0; j < counters.length - 1; j++) {
+                System.out.print(counters[j] + " ");
+            }
+            System.out.println(counters[counters.length - 1]);
+        }
+
         in.close();
     }
 
