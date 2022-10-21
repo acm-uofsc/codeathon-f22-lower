@@ -13,7 +13,7 @@ mkdir -p cases/output
 [[ -e samples/input ]] && cp -r samples/input ./cases/
 [[ -e samples/output ]] && cp -r samples/output ./cases/
 
-for i in {1..40}
+for i in {1..50}
 do
   echo $i | python3 ./mkin.py > cases/input/input$i.txt
   python3 ./solutions/sol.py < cases/input/input$i.txt > cases/output/output$i.txt

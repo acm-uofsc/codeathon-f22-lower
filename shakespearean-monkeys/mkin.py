@@ -15,12 +15,10 @@ sample_id = int(input())
 if sample_id == 0:
     num_lines = 10
     line_len = 75
-    search_occurance = 0.1
     search_key = 'O Romeo, Romeo, wherefore art thou Romeo?'
 else:
     num_lines = random.randint(MIN_LINES, MAX_LINES)
     line_len = random.randint(MIN_LLEN, MAX_LLEN)
-    search_occurance = 0.1
     search_key_len = random.randint(MIN_SEARCH_LEN, MAX_SEARCH_LEN)
     L1 = random.choice(string.ascii_letters)
     non_l1 = list(string.ascii_letters)
@@ -33,19 +31,13 @@ else:
 print(num_lines)
 print(search_key)
 for _ in range(num_lines):
-    search_insert_loc = random.randint(0, int(line_len / search_occurance))
+    search_insert_loc = random.randint(0, line_len - (len(search_key) // 2))
     j = 0
     while j < line_len:
         if search_insert_loc < line_len - len(search_key) and \
                 j == search_insert_loc:
             print(search_key, end='')
             j += len(search_key)
-        elif sample_id != 0 and j < line_len - len(search_key) - 1:
-            print(search_key[:-1], end='')
-            j += len(search_key) - 1
-        elif sample_id != 0:
-            print(search_key[0], end='')
-            j += 1
         else:
             choice = random.choice(string.ascii_letters)
             print(choice, end='')

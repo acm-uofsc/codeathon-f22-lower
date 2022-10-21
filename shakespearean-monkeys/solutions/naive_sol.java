@@ -12,25 +12,24 @@ class solutions {
         // Get the search key
         String searchKey = in.nextLine();
 
-        int counter = 0;
         for (int i = 0; i < numLines; i++) {
             String line = in.nextLine();
-            counter = counter + countLine(line, searchKey);
+            int counter = countLine(line, searchKey);
+            // Print result
+            System.out.println(counter);
         }
 
-        // Print result
-        System.out.println(counter);
         in.close();
     }
 
-    // Count number of times "Romeo" is in the line
+    // Count number of times the search key is in the line
     public static int countLine(String line, String searchKey) {
         int counter = 0;
-        // Valid places where "Romeo" can start (cannot fit if in the last four characters)
+        // Valid places where the search key can start (cannot fit if in the last four characters)
         for (int i = 0; i < line.length(); i++) {
-            // Find "R"
+            // Find the first character of the search key
             if (line.charAt(i) == searchKey.charAt(0) && i <= line.length() - searchKey.length()) {
-                // Make sure the following characters match "omeo"
+                // Make sure the following characters match the search key
                 boolean match = true;
                 for (int j = 1; j < searchKey.length(); j++) {
                     if (line.charAt(i + j) != searchKey.charAt(j)) {
