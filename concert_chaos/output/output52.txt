@@ -1,0 +1,10 @@
+N T T P O V V B C C
+T T T P O V V B C C
+T T T P O V V B C C
+P P P P O V V B C C
+O O O O O V V B C C
+V V V V V V V B C C
+V V V V V V V B C C
+B B B B B B B B C C
+C C C C C C C C C C
+C C C C C C C C C C

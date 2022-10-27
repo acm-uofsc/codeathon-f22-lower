@@ -1,0 +1,11 @@
+10
+X C N I I I R A A X
+N N I N N C C A I C
+I I N C X X N C X X
+C C N I C N N N N C
+I I C N C N N N X N
+I I I X N I I X X X
+X X I N N I X X I I
+I I I I X X X I X X
+X I X I I X X I X X
+X X X X X X X X X X

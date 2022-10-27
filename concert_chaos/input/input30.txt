@@ -1,0 +1,10 @@
+9
+W W Y Y X P P W Y
+P Y Y Y Y W W H H
+Y P P H Y X W H B
+Y Y W H X H Y B Y
+B H H B Y H W H W
+X Y X Y X X X W H
+X W X Y W X X W W
+W X W X X X X X X
+X X X X X X X X X

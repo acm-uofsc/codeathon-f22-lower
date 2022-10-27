@@ -1,0 +1,9 @@
+H H C C X X F D D
+H H C C X X F D D
+C C C C X X F D D
+C C C C X X F D D
+X X X X X X F D D
+X X X X X X F D D
+F F F F F F F D D
+D D D D D D D D D
+D D D D D D D D D
