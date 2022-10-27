@@ -1,0 +1,8 @@
+7
+X A X Q B B C
+B C A B X X B
+X C X B B C B
+A A A X X C A
+X X A X X C C
+C X C C C C C
+C C C C C C C

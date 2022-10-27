@@ -1,0 +1,15 @@
+14
+N D Q Q Q R X C N N X R X D
+N D C R Q K K X Y K V Y N V
+K N Q R K Y N R V K D Y R X
+V D Y V Y N X Q C R Y K X K
+X Q D Y D N V K C V Y Q R Q
+X R Y D X R Y R V Y R X K R
+Q K K D Q X K D V V R Y D K
+R D Y D Y V V K K V D D V Y
+Y K R Y V K V K K R R Y K D
+Y V V D V R R Y K K V Y V Y
+K Y K R V R V Y R K R R K R
+V V K K K K Y K K R K Y R K
+V K K K K V K V V V V V V V
+V V V V V V V V V V V V V V

@@ -1,0 +1,7 @@
+6
+C I O I U O
+C O O U U O
+C I O C C P
+I O O I I I
+O O O O O O
+O O O O O O

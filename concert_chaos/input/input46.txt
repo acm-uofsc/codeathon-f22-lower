@@ -1,0 +1,10 @@
+9
+X F F D D H H F X
+D D X D F F D C H
+C X X F C D C H X
+C C F D C F X X D
+F F F C X D D F X
+C C X X C D X D X
+D D C X X F X X X
+X D D D D D D D D
+D D D D D D D D D

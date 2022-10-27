@@ -1,0 +1,10 @@
+P P S B A I I K Y Y
+P P S B A I I K Y Y
+S S S B A I I K Y Y
+B B B B A I I K Y Y
+A A A A A I I K Y Y
+I I I I I I I K Y Y
+I I I I I I I K Y Y
+K K K K K K K K Y Y
+Y Y Y Y Y Y Y Y Y Y
+Y Y Y Y Y Y Y Y Y Y

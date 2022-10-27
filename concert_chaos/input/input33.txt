@@ -1,0 +1,11 @@
+10
+A I D Q B P Q Q M D
+A B A I A D I D B A
+X P D A P Q D P B I
+I P P P B X P I X D
+B B P A A I D A B X
+I A P B A I I X X B
+X P Q P P P X P X P
+B Q X Q I Q I B B B
+I X I I Q Q X X Q B
+I Q Q Q I Q Q Q Q Q
