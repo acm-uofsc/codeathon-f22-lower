@@ -6,7 +6,10 @@ public class Puyo {
     static int M;
     static int N;
     static Boolean popFlag;
-
+    static Boolean[][] visits;
+    static ArrayList<Coord> popped;
+    static ArrayList<Coord> currentChain;
+    static int total;
 
     public class Coord {
         public final Integer m;
@@ -18,23 +21,30 @@ public class Puyo {
      }
     }
 
-    ArrayList<Coord> popPuyos(int[][] puyoMat, Boolean[][] visits) {
-        ArrayList<Coord> popped = new ArrayList<Coord>();
+    ArrayList<Coord> popPuyos(int[][] puyoMat) {
+        popped = new ArrayList<Coord>();
         popFlag = false;
+        total = 0;
         for (int i=0; i < puyoMat.length; i++) {
             for (int j = 0; j < puyoMat[0].length; j++) {
                 if (!visits[i][j] && puyoMat[i][j] != 0) {
                     popFlag = false;
-                    this.dfs(i, j, 0, popped, puyoMat, visits);
+                    total = 0;
+                    currentChain = new ArrayList<Coord>();
+                    this.dfs(i, j, puyoMat);
+                    if (popFlag) {
+                        popped.addAll(currentChain);
+                    }
                 }   
             }
         }
         return popped;
     }
 
-    void dfs(int m, int n, int total, ArrayList<Coord> popped,
-        int[][] puyoMat, Boolean[][] visits) {
+    void dfs(int m, int n,
+        int[][] puyoMat) {
         visits[m][n] = true;
+        currentChain.add(new Coord(m,n));
         total++; // keep count of how many puyos are in this chain
         if (total >= 4) { // 4 is the magic number of puyos that pops the chain
             popFlag = true;
@@ -46,15 +56,10 @@ public class Puyo {
             for (int j=-1; j <= 1; j++) {
                 if(inBounds(i + m, j + n) && isOrthognol(i, j)
                     && !visits[i + m][j + n] 
-                    && puyoMat[m][n] == puyoMat[m + i][n + j]
-                    && puyoMat[m + i][n + j] != 0) {
-                    dfs(i + m, j + n, total, popped, puyoMat, visits);
+                    && puyoMat[m][n] == puyoMat[m + i][n + j]) {
+                    dfs(i + m, j + n, puyoMat);
                 }
             }
-        }
-        // if this chain was popped, add this puyo's coords
-        if (popFlag) {
-            popped.add(new Coord(m, n));
         }
     }
 
@@ -79,7 +84,7 @@ public class Puyo {
         N = in.nextInt();
 
         int[][] mat = new int[M][N];
-        Boolean[][] visits = new Boolean[M][N];
+        visits = new Boolean[M][N];
 
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
@@ -88,7 +93,7 @@ public class Puyo {
             }
         }
 
-        ArrayList<Coord> popped = puyo.popPuyos(mat, visits);
+        ArrayList<Coord> popped = puyo.popPuyos(mat);
 
         popped.sort(
                     (e1, e2) -> {

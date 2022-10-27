@@ -17,7 +17,7 @@ rm -rf cases.zip
 for i in {2..50}
 do
   echo $i | python3.9 ./mkin.py > input/input$i.txt
-  node ./solutions/sol.js < input/input$i.txt > output/output$i.txt
+  java --class-path solutions/Java Puyo < input/input$i.txt > output/output$i.txt
 #   if [[ $? -ne 0 ]]; then
     # break
 #   fi
